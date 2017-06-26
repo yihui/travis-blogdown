@@ -1,0 +1,30 @@
+---
+title: Home
+---
+
+# TRAVIS-BLOGDOWN
+
+## _You write (Rmd) posts, and Travis CI does the rest of work_
+
+This is an example website on how to use Travis CI to build and deploy your website automatically. The idea can be applied to Github Pages, Amazon S3, and Netlify, etc. For this particular example, I'm using Github Pages.
+
+Below are some R code chunks. First we show the content of `.travis.yml`:
+
+```{r comment=''}
+cat(readLines('../.travis.yml'), sep = '\n')
+```
+
+Then we show the number of lines of each `.html` and `.css` file in the `hugo-xmin` theme:
+
+```{r}
+# find ../themes/hugo-xmin \( -name '*.html' -o -name '*.css' \) | xargs wc -l
+files = list.files(
+  '../themes/hugo-xmin', '[.](html|css)$', recursive = TRUE, full.names = TRUE
+)
+lines = lapply(files, function(f) {
+  data.frame(n = length(readLines(f)), file = f)
+})
+lines = do.call(rbind, lines)
+lines = rbind(lines, data.frame(n = sum(lines$n), file = 'total'))
+knitr::kable(lines)
+```

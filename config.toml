@@ -1,0 +1,22 @@
+baseurl = "https://travis-blogdown.yihui.name/"
+languageCode = "en-us"
+title = "A minimal Hugo website"
+theme = "hugo-xmin"
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    name = "Github"
+    url = "https://github.com/yihui/travis-blogdown"
+    weight = 2
+[[menu.main]]
+    name = "Blogdown"
+    url = "https://github.com/rstudio/blogdown"
+    weight = 3
+
+[params]
+    description = "A website built through Hugo and blogdown, and deployed automatically from Travis CI."
+    footer = "&copy; [Yihui Xie](https://yihui.name) 2017 | [Github](https://github.com/yihui) | [Twitter](https://twitter.com/xieyihui)"
