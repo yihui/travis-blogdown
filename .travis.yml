@@ -1,5 +1,6 @@
 language: r
 dist: xenial
+latex: false
 
 branches:
   only:
@@ -10,7 +11,6 @@ cache:
   directories:
     - $HOME/bin
 
-latex: false
 
 script:
   - Rscript -e 'blogdown::install_hugo()'
