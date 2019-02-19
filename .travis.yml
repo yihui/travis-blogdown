@@ -11,6 +11,8 @@ branches:
 cache:
   packages: yes
 
+latex: false
+
 script:
   - Rscript -e 'blogdown::build_site()'
 
