@@ -19,4 +19,4 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 
 [params]
     description = "A website built through Hugo and blogdown, and deployed automatically from Travis CI."
-    footer = "&copy; [Yihui Xie](https://yihui.name) 2017 | [Github](https://github.com/yihui) | [Twitter](https://twitter.com/xieyihui)"
+    footer = "&copy; [Yihui Xie](https://yihui.name) 2017 - 2019 | [Github](https://github.com/yihui) | [Twitter](https://twitter.com/xieyihui)"
