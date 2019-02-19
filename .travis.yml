@@ -1,6 +1,5 @@
 language: r
-dist: trusty
-sudo: false
+dist: xenial
 
 branches:
   only:
