@@ -1,8 +1,5 @@
 language: r
 dist: xenial
-addons:
-  snaps:
-    - hugo
 
 branches:
   only:
@@ -10,10 +7,13 @@ branches:
 
 cache:
   packages: yes
+  directories:
+    - $HOME/bin
 
 latex: false
 
 script:
+  - Rscript -e 'blogdown::install_hugo()'
   - Rscript -e 'blogdown::build_site()'
 
 deploy:
